@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Nav from '../components/NavResearch.astro';
+import Formulario from "../components/ModifyRegisterInformation.astro";
+---
+
+<Layout title="Registro de informacion (Investigador)">
+    <Nav enlace="/researchProjects" text='Proyectos' icon='fa-solid fa-helmet-safety'
+        enlace2="/researchEnvironments" text2='Ambiente' icon2='fa-solid fa-seedling'
+        enlace3='/researchForum' text3='Foros' icon3='fa-solid fa-users'
+        enlace4='/researchForumAdmin' text4='Foros Administrativos' icon4='fa-solid fa-people-group'
+        enlace5='/researchProfile' text5='Perfil' icon5='fa-solid fa-user'>
+    </Nav>
+
+        <div class="div">
+			<h2>Registro de informacion</h2>
+		</div>
+
+        <Formulario question="Nuevo titulo"
+                    question2="Redacte la informacion"
+                    question3="Ingrese una imagen"
+                    
+                    answer="Nuevo titulo"
+                    answer2="Nueva informacion"
+                    answer3=""
+        ></Formulario>
+</Layout>
+
+<style>
+    .div{
+        padding: 10% 0 0 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* ---------------------------RESPONSIVE MOBILE -------------------------*/
+@media(max-width: 900px){
+	.div{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+}
+</style>
+
+

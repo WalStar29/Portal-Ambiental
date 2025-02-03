@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Nav from '../components/NavAdmin.astro';
+import Formulario from "../components/ModifyRegisterInformation.astro";
+---
+
+<Layout title="Modificacion de informacion (Investigador)">
+    <Nav enlace="/adminHome" text='Home' icon='fa-solid fa-house'
+        enlace2="/adminGallery" text2='Galeria' icon2='fa-solid fa-image'
+        enlace3="/adminProjects" text3='Proyectos' icon3='fa-solid fa-helmet-safety'
+        enlace4='/adminEnvironments' text4='Ambiente' icon4='fa-solid fa-seedling'
+        enlace5='/adminTourism' text5='Turismo' icon5='fa-solid fa-umbrella-beach'
+        enlace6='/adminCounsellor' text6='Consejales' icon6='fa-solid fa-people-arrows'
+        enlace7='/adminResearch' text7='Investigadores' icon7='fa-solid fa-magnifying-glass'
+        enlace8='/adminForum' text8='Foro' icon8='fa-solid fa-users'
+        enlace9='/adminForumAdmin' text9='Foros Administrativos' icon9='fa-solid fa-people-group'
+        enlace10='/adminProfile' text10='Perfil' icon10='fa-solid fa-user'>
+    </Nav>
+    
+        <div class="div">
+			<h2>Modificacion de informacion</h2>
+		</div>
+
+        <Formulario question="Nuevo titulo"
+                    question2="Redacte la informacion"
+                    question3="Ingrese una imagen"
+                    
+                    answer="Nuevo titulo"
+                    answer2="Nueva informacion"
+                    answer3="">
+        </Formulario>
+</Layout>
+
+<style>
+    .div{
+        padding: 10% 0 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    /* ---------------------------RESPONSIVE MOBILE -------------------------*/
+@media(max-width: 900px){
+	.div{
+        padding: 10% 0 0 0;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+}
+</style>
+
+

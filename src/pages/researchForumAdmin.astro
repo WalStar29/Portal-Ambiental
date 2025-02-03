@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/NavResearch.astro';
+import ForoAdministrativo from '../components/ForoAdministrativo.astro';
+---
+
+<Layout title='Foros Administrador (Investigador)'>
+    <Nav enlace="/researchProjects" text='Proyectos' icon='fa-solid fa-helmet-safety'
+        enlace2="/researchEnvironments" text2='Ambiente' icon2='fa-solid fa-seedling'
+        enlace3='/researchForum' text3='Foros' icon3='fa-solid fa-users'
+        enlace4='/researchForumAdmin' text4='Foros Administrativos' icon4='fa-solid fa-people-group'
+        enlace5='/researchProfile' text5='Perfil' icon5='fa-solid fa-user'>
+    </Nav>
+
+    <ForoAdministrativo>
+    </ForoAdministrativo>
+</Layout>

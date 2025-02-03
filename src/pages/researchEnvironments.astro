@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/NavResearch.astro';
+import H1 from "../components/Titulos.astro";
+import ContenedorPadres from "../layouts/ContenedorPadres.astro";
+import Informacion from "../components/Informacion.astro";
+import Slider from "../components/Slider.astro";
+
+import caracteristicas from "../data/CaracteristicasLaguna.js"
+import uso from "../data/UsoLaguna.js"
+import importancia from '../data/ImportanciaLaguna.js';
+---
+
+<Layout title='Laguna de Punta de Piedras (Investigador)'>
+    <Nav enlace="/researchProjects" text='Proyectos' icon='fa-solid fa-helmet-safety'
+        enlace2="/researchEnvironments" text2='Ambiente' icon2='fa-solid fa-seedling'
+        enlace3='/researchForum' text3='Foros' icon3='fa-solid fa-users'
+        enlace4='/researchForumAdmin' text4='Foros Administrativos' icon4='fa-solid fa-people-group'
+        enlace5='/researchProfile' text5='Perfil' icon5='fa-solid fa-user'>
+    </Nav>
+
+    <!-- ContenedorPadre -->
+    <ContenedorPadres>
+        <H1 title='Laguna de punta de piedras'></H1>
+        <Informacion subtitle='' img='' contexto='La Laguna de Punta de Piedras es un importante cuerpo de agua ubicado en la ciudad de Punta de Piedras, en el estado Nueva Esparta, Venezuela. Esta laguna es un ambiente costero cercano a un desarrollo urbano significativo en la Isla de Margarita, lo que influye en las características fisicoquímicas de sus aguas.'>
+            <img src="https://github.com/WalStar29/Portal-Digital/blob/main/public/Punta_de_Piedras_aerea.jpg?raw=true" alt="">
+        </Informacion>
+        <div class="icon">
+            <a href="/modifyInformation"><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a>
+            <i class="fa-solid fa-trash" style="color: #000000;"></i>
+        </div>
+    </ContenedorPadres>
+
+    <!-- ContenedorPadre 2 -->
+    <ContenedorPadres>
+        <H1 title='Características de la Laguna'></H1>
+        {caracteristicas.map(c => (<div> <Informacion subtitle={c.subtitle} contexto={c.contexto} img="" /> 
+            <div class="icon"> 
+                <a href={c.ulr}><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a> 
+                <i class="fa-solid fa-trash" style="color: #000000;"></i> 
+            </div> 
+        </div> ))}
+    </ContenedorPadres>
+
+    <!-- ContenedoPadre 3 -->
+    <ContenedorPadres>
+        <H1 title='Usos'></H1>
+        {uso.map(u => (<div> <Informacion subtitle={u.subtitle} contexto={u.contexto} img="" /> 
+            <div class="icon"> 
+                <a href={u.ulr}><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a> 
+                <i class="fa-solid fa-trash" style="color: #000000;"></i> 
+            </div> 
+        </div> ))}
+    </ContenedorPadres>
+
+    <!-- ContenedoPadre 4 -->
+    <ContenedorPadres>
+        <H1 title='Importancia'></H1>
+        {importancia.map(i => (<div><Informacion subtitle={i.subtitle} contexto={i.contexto} img=""/>
+        <div class="icon">
+            <a href={i.ulr}><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a> 
+            <i class="fa-solid fa-trash" style="color: #000000;"></i> 
+        </div></div>))}
+    </ContenedorPadres>
+
+    <!-- ContenedorPadre 5 -->
+    <ContenedorPadres>
+        <H1 title='La laguna en la actualidad'></H1>
+        <Informacion img='' subtitle='' contexto='Actualmente se a observado que la comunidad enfrenta multiples desafios relacionados con la contaminacion, la comunidad carece de infraestructuras y servicios basicos, como instalaciones academicas y centro de salud, lo que limita el acceso a recursos esenciales y afecta la calidad de vida de los habitantes. Se reportan problemas de senamiento, comom aguas negras estancadas en las calles, que representa un riesgo para la salud publica y constribuyen a la contaminacion de la laguna. Existe una necesidad urgente de aumentar la conciencia y educacion sobre la importancia de la conservacion del medio ambiente.'>
+            <Slider 
+            imagen='https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Slider/Contraminacion%20Sector.jpg?raw=true' 
+            imagen2='https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Slider/Contraminacion2%20Sector.jpg?raw=true' 
+            imagen3='https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Slider/Contraminacion3%20Sector.jpg?raw=true' 
+            imagen4='https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Slider/Contraminacion4%20Sector.jpg?raw=true' 
+            imagen5='https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Slider/Contraminacion5%20Sector.jpg?raw=true'>
+            </Slider>
+        </Informacion>
+    </ContenedorPadres>
+</Layout>
+
+<style>
+    img{
+        width: 50%;
+        border-radius: 5px;
+    }
+
+    
+    .icon{
+        margin: -2% 0 10% 0;
+		display: flex;
+		justify-content: space-around;
+		font-size: 150%;
+		width: 100%;
+	}
+</style>

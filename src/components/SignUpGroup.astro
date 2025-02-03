@@ -1,0 +1,105 @@
+---
+import H1 from "../components/Titulos.astro"
+---
+
+<div class="SignUp">
+    <div class="titulo">
+        <H1 title='Solicitud de registro'></H1>
+    </div>
+
+    <form class='form' action="https://formsubmit.co/waltercastro172913@gmail.com" method="POST">
+        <label for="Identidad">Cedula de Identidad</label>
+        <input type="number" name='name' required />
+
+        <label for="nombre">Nombre y Apellido</label>
+        <input type="text" name='name' required />
+    
+        <label for="Indique su correo electronico">Indique su correo electronico</label>
+        <input type="text" name='Correo' required/>
+    
+        <label for="Telefono">Numero de telefono</label>
+        <input type="number" name='Asunto' required/>
+            
+        <div class="texBot">
+            <label for="Nota">Nota</label>
+            <textarea name="comentarios" required></textarea>
+    
+            <input type="submit" value="Enviar" />
+        </div>
+                
+        <input type="hidden" name='_captcha' value="false"/>
+    </form>
+</div>
+
+<style>
+    .SignUp{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .form{
+        background-color: rgb(255, 255, 255, 0.8);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 2% 1%;
+        text-align: left;
+        transition: all 900ms;
+    }.form:hover{
+        transition: all 900ms;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: rgb(255, 255, 255);
+    }
+    
+    .form label{
+        margin: 2% 0;
+    }
+    
+    .form input{
+        padding: 2%;
+        border-radius: 10px;
+        border: none;
+        margin: 0 0 2% 0;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .texBot{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    textarea{
+        border-radius: 10px;
+        padding: 2% 2% 10% 2%;
+        width: 90%;
+        height: auto;
+        resize: none;
+        margin: 0 0 2% 0;
+    }
+    
+    @media(max-width: 900px){
+        .SignUp{
+            width: 100%;
+        }
+
+        .form{
+            width: 100%;
+            padding: 0 2%;
+        }
+    
+        textarea{
+            width: 100%;
+        }
+    
+        .form input{
+            padding: 3% 5%;
+        }
+    }
+</style>

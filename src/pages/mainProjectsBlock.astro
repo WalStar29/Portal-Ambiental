@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import ContenedorPadres from "../layouts/ContenedorPadres.astro";
+import Informacion from "../components/Informacion.astro";
+import ContenedorCartas from "../layouts/ContenedorCartas.astro";
+import CartasInformativa2 from "../components/CartaInformativa2.astro";
+
+import proyecto from "../data/Proyectos.js"
+import Titulos from '../components/Titulos.astro';
+---
+
+<Layout title='Punta de piedras'>
+    <Nav enlace="/" text='Home' icon='fa-solid fa-house'
+        enlace2="/mainGalleryBlock" text2='Galeria' icon2='fa-solid fa-image'
+        enlace3="/mainProjectsBlock" text3='Proyectos' icon3='fa-solid fa-helmet-safety'
+        enlace4='/mainEnvironmentsBlock' text4='Ambiente' icon4='fa-solid fa-seedling'
+        enlace5='/mainTourismBlock' text5='Turismo' icon5='fa-solid fa-umbrella-beach'
+        enlace6='/mainContactUsBlock' text6='Contectenos' icon6='fa-solid fa-phone'
+        enlace7='/mainForumBlock' text7='Foro' icon7='fa-solid fa-users'
+        enlace8='/signIn' text8='Iniciar sesion' icon8=''>
+    </Nav>
+
+    <ContenedorPadres >
+        <Titulos title='Futuros proyectos'></Titulos>
+        <Informacion img='' subtitle='' contexto='Las Instituciones Universitarias, Instituto Unicersitario Politecnico "Santiago Marino" y El Tecnologico "Antonio Jose De Sucre" EXTENSION PORLAMAR, Se toman de la mano para dirigirse al municipio tubores, Punta de Piedras para estar presente a las comunidades y sectores'>
+            <div class="LogosUniversidad">
+                <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Instituciones/Antonio_jose_de_sucre.png?raw=true" alt="">
+                <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Instituciones/Santiago_Marinio.png?raw=true" alt="">
+            </div>
+        </Informacion>
+    </ContenedorPadres>
+
+    <!-- ContenedorPadre 2 -->
+    <ContenedorPadres>
+        <ContenedorCartas>
+            {proyecto.map(p => (<CartasInformativa2 titulo={p.titulo} contexto={p.contexto} imagen={p.imagen} pdf={p.pdf} />))}
+        </ContenedorCartas>
+    </ContenedorPadres>
+</Layout>
+
+<style>
+	.LogosUniversidad{
+		display: flex;
+		justify-content: center;
+	}
+
+	img{
+		width: 20%; 
+		filter: drop-shadow(
+			0 0 5px rgb(255, 255, 255)
+		);
+	}
+</style>

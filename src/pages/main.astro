@@ -14,14 +14,14 @@ import flora from '../data/Flora.js'
 ---
 
 <Layout title='Punta de piedras'>
-    <Nav enlace="/" text='Home' icon='fa-solid fa-house'
-        enlace2="/mainGalleryBlock" text2='Galeria' icon2='fa-solid fa-image'
-        enlace3="/mainProjectsBlock" text3='Proyectos' icon3='fa-solid fa-helmet-safety'
-        enlace4='/mainEnvironmentsBlock' text4='Ambiente' icon4='fa-solid fa-seedling'
-        enlace5='/mainTourismBlock' text5='Turismo' icon5='fa-solid fa-umbrella-beach'
-        enlace6='/mainContactUsBlock' text6='Contectenos' icon6='fa-solid fa-phone'
-        enlace7='/mainForumBlock' text7='Foro' icon7='fa-solid fa-users'
-        enlace8='/signIn' text8='Iniciar sesion' icon8=''>
+    <Nav enlace="/main" text='Home' icon='fa-solid fa-house'
+        enlace2="/mainGallery" text2='Galeria' icon2='fa-solid fa-image'
+        enlace3="/mainProjects" text3='Proyectos' icon3='fa-solid fa-helmet-safety'
+        enlace4='/mainEnvironments' text4='Ambiente' icon4='fa-solid fa-seedling'
+        enlace5='/mainTourism' text5='Turismo' icon5='fa-solid fa-umbrella-beach'
+        enlace6='/mainContactUs' text6='Contectenos' icon6='fa-solid fa-phone'
+        enlace7='/mainForum' text7='Foro' icon7='fa-solid fa-users'
+        enlace8='/mainProfile' text8='Perfil' icon8='fa-solid fa-user'>
     </Nav>
 
     <!-- ContenedorPadre -->
@@ -56,7 +56,7 @@ import flora from '../data/Flora.js'
 			<Titulos title='Fauna de Punta de piedras'></Titulos>
 		</div>
 		<ContenedorCartas>
-			{faunaPuntaPiedras.map(f => (<CartasInformativa titulo={f.titulo} contexto={f.contexto} imagen={f.imagen} />))}
+			{faunaPuntaPiedras.map(f => (<CartasInformativa titulo={f.titulo} contexto={f.contexto} imagen={f.imagen} enlace='' enlace2=''icon='' icon2=''/>))}
 		</ContenedorCartas>
 	</ContenedorPadres>
 
@@ -66,7 +66,7 @@ import flora from '../data/Flora.js'
 			<Titulos title='Flora de la laguna'></Titulos>
 		</div>
 		<ContenedorCartas>
-			{flora.map(f => (<CartasInformativa titulo={f.titulo} contexto={f.contexto} imagen={f.imagen}/>))}
+			{flora.map(f => (<CartasInformativa titulo={f.titulo} contexto={f.contexto} imagen={f.imagen} enlace='' enlace2=''icon='' icon2=''/>))}
 		</ContenedorCartas>
 	</ContenedorPadres>
 </Layout>

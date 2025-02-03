@@ -1,0 +1,61 @@
+---
+interface Props {
+    imagen: string;
+    imagen2: string;
+    imagen3: string;
+    imagen4: string;
+    imagen5: string;
+}
+const {imagen, imagen2, imagen3, imagen4, imagen5} = Astro.props;
+---
+
+<div class="slider">
+    <ul>
+        <li><div><img src={imagen}></div></li>
+        <li><div><img src={imagen2}></div></li>
+        <li><div><img src={imagen3}></div></li>
+        <li><div><img src={imagen4}></div></li>
+        <li><div><img src={imagen5}></div></li>
+    </ul>
+</div>
+
+<style>
+    .slider{
+		overflow: hidden;
+		width: 100%;
+	}
+
+	ul{
+		display: flex;
+		width: 500%;
+		animation: slide 15s infinite alternate ease-in-out;
+	}
+
+	li{
+		list-style: none;
+		width: 100%;
+	}
+
+	img{
+		margin: 0 0 0 15%;
+		display: flex;
+		width: 50%;
+		border-radius: 20px;
+	
+	}
+
+	@keyframes slide{
+		0% {margin-left: 0%;}
+		20% {margin-left: 0%;}
+
+		25% {margin-left: -100%;}
+		45% {margin-left: -100%;}
+
+		50% {margin-left: -200%;}
+		70% {margin-left: -200%;}
+
+		75% {margin-left: -300%;}
+		95% {margin-left: -300%;}
+	}
+
+</style>

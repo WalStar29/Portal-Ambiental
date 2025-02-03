@@ -1,0 +1,53 @@
+---
+interface Props {
+    asunto : string
+    entrar: string;
+}
+const {entrar, asunto} = Astro.props;
+---
+
+<div class="contenedor">
+    <div class="foros">
+        <p>{asunto}</p>
+        <a href="">{entrar}</a>
+    </div>
+</div>
+
+<style>
+    .contenedor{
+        padding: 2% 0 0 0;
+    }
+
+    .foros{
+        width: 100%;
+        background-color: rgb(255, 255, 255, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+        padding: 2% 0;
+        transition: all 900ms;
+        border-radius: 10px;
+    }.foros:hover{
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 0px 10px 60px 0px rgb(0, 0, 0);
+        transition: all 900ms;
+        color: rgb(255, 255, 255);
+    }
+
+    p{
+        margin: 0 0 1% 0;
+        font-size: 150%;
+    }
+
+    a{
+        color: rgb(255, 255, 255);
+        font-size: 100%;
+    }
+
+    @media(max-width: 900px){
+        .contenedor{
+            padding: 5% 0 0 0;
+        }
+    }
+</style>

@@ -1,0 +1,126 @@
+---
+interface Props {
+    enlace: string;
+    id: string;
+}
+const {enlace, id} = Astro.props;
+
+import H1 from "../components/Titulos.astro"
+---
+
+<div class="SignIn">
+    <div class="titulo">
+        <H1 title='Inicio de sesion'></H1>
+    </div>
+
+    <form class='form' method="POST" id="login">
+        <label for="">Usuario: </label>
+        <input type="text" name='user' id="user" required />
+
+        <label for="">Contrasenia: </label>
+        <input type="text" name='contrasenia' id="contrasenia" required/>
+
+        <div class="botones">
+            <button type="submit"><a href="">Iniciar</a></button>
+        </div>
+
+        <p>
+            <a href="/registerCommunity">Registrar</a> 
+            <a href="/registerGroup">Forma Parte de Nosotros</a>
+        </p>
+    </form>
+
+    <p id="message"></p>
+</div>
+<script src="/src/js/SignInAdmin.js"></script>
+
+<style>
+    .SignIn{
+        padding: 7% 0 0 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .form{
+        background-color: rgb(255, 255, 255, 0.8);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 2% 1%;
+        text-align: left;
+        transition: all 900ms;
+    }.form:hover{
+        transition: all 900ms;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: rgb(255, 255, 255);
+    }
+    
+    .form label{
+        margin: 2% 0;
+    }
+    
+    .form input{
+        padding: 2%;
+        border-radius: 10px;
+        border: none;
+        margin: 0 0 2% 0;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+    }
+
+    .botones{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4% 0;
+    }
+
+    button{
+        margin: 2% 0 0 0;
+        width: 50%;
+        padding: 2% 0%;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(255, 255, 255); 
+    }button:hover{
+        box-shadow: 0 0 10px rgb(0, 0, 0);
+    }
+
+    button a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
+    p{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    p a{
+        color: rgb(255, 255, 255);
+        margin: 0 0 2% 0
+    }
+    
+    @media(max-width: 900px){
+        .SignIn{
+            width: 100%;
+            padding: 5% 0 0 0;
+        }
+
+        .form{
+            width: 100%;
+            padding: 0 2%;
+        }
+    
+        .form input{
+            padding: 3% 5%;
+        }
+    }
+</style>

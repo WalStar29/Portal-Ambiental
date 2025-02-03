@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import ContenedorPadres from "../layouts/ContenedorPadres.astro";
+import Titulos from '../components/Titulos.astro';
+---
+
+<Layout title='Punta de piedras'>
+    <Nav enlace="/main" text='Home' icon='fa-solid fa-house'
+        enlace2="/mainGallery" text2='Galeria' icon2='fa-solid fa-image'
+        enlace3="/mainProjects" text3='Proyectos' icon3='fa-solid fa-helmet-safety'
+        enlace4='/mainEnvironments' text4='Ambiente' icon4='fa-solid fa-seedling'
+        enlace5='/mainTourism' text5='Turismo' icon5='fa-solid fa-umbrella-beach'
+        enlace6='/mainContactUs' text6='Contectenos' icon6='fa-solid fa-phone'
+        enlace7='/mainForum' text7='Foro' icon7='fa-solid fa-users'
+        enlace8='/mainProfile' text8='Perfil' icon8='fa-solid fa-user'>
+    </Nav>
+
+    <ContenedorPadres>
+        <Titulos title='Area de fotografias'></Titulos>
+        <div class="imagenes">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/IngenieriaSistemas/GrupoSISTEMAS.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/IngenieriaMecanica/GrupoMecanica.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/IngenieriaQuimica/GrupoQuimica.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/IngenieriaIndustrial/GrupoIndustrial.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Arquitecturas/Grupo1Arquitectura.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Arquitecturas/Grupo2Arquitectura.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Arquitecturas/Grupo2Arquitectura2.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Arquitecturas/Grupo2Arquitectura3.jpg?raw=true" alt="">
+            
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_2.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_3.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_4.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_5.jpg?raw=true" alt="">
+            
+
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_6.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_7.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_8.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_9.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_10.jpg?raw=true" alt="">
+
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_11.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_12.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_13.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_14.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_15.jpg?raw=true" alt="">
+
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_16.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_17.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_18.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_19.jpg?raw=true" alt="">
+            <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Galeria/imagen_20.jpg?raw=true" alt="">
+            
+        </div>
+    </ContenedorPadres>
+</Layout>
+
+<style>
+    .imagenes{
+        text-align: center;
+        padding: 5% 0;
+    }
+    img, video{
+        width: 20%;
+        margin: 1%;
+        border-radius: 10px;
+    }
+
+    @media(max-width: 600px){
+        img, video{
+        width: 30%;
+        }
+    }
+</style>

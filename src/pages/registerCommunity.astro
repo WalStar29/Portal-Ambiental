@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from '../components/Nav.astro';
+import SignUpCommunity from "../components/SignUpCommunity.astro";
+---
+
+<Layout title="Registrar">
+    <Nav enlace="/" text='Home' icon='fa-solid fa-house'
+        enlace2="/mainGalleryBlock" text2='Galeria' icon2='fa-solid fa-image'
+        enlace3="/mainProjectsBlock" text3='Proyectos' icon3='fa-solid fa-helmet-safety'
+        enlace4='/mainEnvironmentsBlock' text4='Ambiente' icon4='fa-solid fa-seedling'
+        enlace5='/mainTourismBlock' text5='Turismo' icon5='fa-solid fa-umbrella-beach'
+        enlace6='/mainContactUsBlock' text6='Contectenos' icon6='fa-solid fa-phone'
+        enlace7='/mainForumBlock' text7='Foro' icon7='fa-solid fa-users'
+        enlace8='/signIn' text8='Iniciar sesion' icon8=''>
+    </Nav>
+
+    <div>
+        <SignUpCommunity></SignUpCommunity>
+    </div>
+</Layout>
+
+<style>
+    div{
+        width: 100%;
+        margin: 0 0 5% 0;
+    }
+
+    @media(max-width: 900px){
+        div{
+            padding: 5% 0 0 0;
+        }
+    }
+</style>

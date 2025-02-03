@@ -1,0 +1,253 @@
+---
+interface Props {
+	enlace: string;
+    enlace2: string;
+    enlace3: string;
+    enlace4: string;
+    enlace5: string;
+    enlace6: string;
+    enlace7: string;
+    enlace8: string;
+
+    text: string;
+    text2: string;
+    text3: string;
+    text4: string;
+    text5: string;
+    text6: string;
+    text7: string;
+    text8: string;
+
+    icon: string;
+    icon2: string;
+    icon3: string;
+    icon4: string;
+    icon5: string;
+    icon6: string;
+    icon7: string;
+    icon8: string;
+}
+
+const { enlace, enlace2, enlace3, enlace4, enlace5, enlace6, enlace7, enlace8,
+        text, text2, text3, text4, text5, text6, text7, text8,
+        icon, icon2, icon3, icon4, icon5, icon6, icon7, icon8} = Astro.props;
+---
+
+<nav class="nav">
+    <ul>
+        <li><a href={enlace}><i class={icon} style="color: #000000;"></i>{text}</a></li>
+        <li><a href={enlace2}><i class={icon2} style="color: #000000;"></i>{text2}</a></li>
+        <li><a href={enlace3}><i class={icon3} style="color: #000000;"></i>{text3}</a></li>
+        <li><a href={enlace4}><i class={icon4} style="color: #000000;"></i>{text4}</a></li>
+        <li><a href={enlace5}><i class={icon5} style="color: #000000;"></i>{text5}</a></li>
+        <li><a href={enlace6}><i class={icon6} style="color: #000000;"></i>{text6}</a></li>
+        <li><a href={enlace7}><i class={icon7} style="color: #000000;"></i>{text7}</a></li>
+        <li><a href={enlace8}><i class={icon8} style="color: #000000;"></i>{text8}</a></li>
+    </ul>
+
+</nav>
+
+<!------------------------------- RESPONSIVE ------------------------------------>
+
+<!-- BARRA LATERAL -->
+<label class="responsive">
+    <input class="check" type="checkbox">
+        <div class="toggle">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+        </div>
+        
+        <div class="slide">
+            <ul>
+                <li><a class="id" href={enlace}><i class={icon} style="color: #000000;"></i>{text}</a></li>
+                <li><a class="id" href={enlace2}><i class={icon2} style="color: #000000;"></i>{text2}</a></li>
+                <li><a class="id" href={enlace3}><i class={icon3} style="color: #000000;"></i>{text3}</a></li>
+                <li><a class="id" href={enlace4}><i class={icon4} style="color: #000000;"></i>{text4}</a></li>
+                <li><a class="id" href={enlace5}><i class={icon5} style="color: #000000;"></i>{text5}</a></li>
+                <li><a class="id" href={enlace6}><i class={icon6} style="color: #000000;"></i>{text6}</a></li>
+                <li><a class="id" href={enlace7}><i class={icon7} style="color: #000000;"></i>{text7}</a></li>
+                <li><a class="id" href={enlace8}><i class={icon8} style="color: #000000;"></i>{text8}</a></li>
+            </ul>
+        </div>
+</label>
+
+<style>
+    .nav {
+        font-size: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        box-shadow: 0px 0px 50px 0px rgb(216, 217, 218);
+        background-color: rgb(255, 255, 255);
+        border-radius: 0 0 20px 20px;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .nav ul{
+        width: 90%;
+        display: flex;
+        list-style: none;
+        text-align: center;
+        align-items: center;
+    }
+
+    .nav li {
+        width: 100%;
+    }
+
+    .nav li a{
+        text-decoration: none;
+        color: #000000;
+        display: block;
+        padding: 15% 0;
+    }
+
+    .nav li a:hover{
+        padding: 15% 0%;
+        background-color:rgb(255, 246, 224);
+        cursor: pointer;
+        transform: scale(1.0);
+        transition: all 100ms;
+        border-radius: 10px;
+    }
+
+
+    label{
+        display: none;
+    }
+
+
+
+@media(max-width: 900px){
+    label{
+        display: initial;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .slide{
+        width: auto;
+        height: 400px;
+        overflow-y: auto;
+        transition: 0.5s ease;
+        transform: translateX(-100%);
+        padding: 6% 0;
+        background-color: rgb(255, 246, 224);
+        border-radius: 0 10px 20px 0;
+        position: fixed;
+    }
+
+    label{
+        position: absolute;
+        z-index: 1;
+    }
+
+    ul li a{
+        color: rgb(39, 40, 41);
+        font-weight: 500;
+        padding: 5px 0;
+        display: block;
+        text-transform: capitalize;
+        transition: 0.2s ease-out;
+        padding: 20px;
+        text-decoration:  none;
+    }
+
+    ul li a i{
+        width: 40px;
+    }
+
+    ul li{
+        background-color: transparent;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    ul li:hover{
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        transform: scale(1.1);
+    }
+
+    ul li a:hover{
+        color: #000000;
+    }
+
+    .id{
+        color: rgb(255, 246, 224);
+        background-color: transparent;
+    }
+
+
+/* FUNCION DE LA BARRA */
+    .check{
+        display: none;
+        visibility: hidden;
+    }
+
+    .toggle{
+        top:0;
+        position: fixed;;
+        height: 50px;
+        width: 40px;
+        z-index: 1;
+        border-radius: 2px;
+    }
+
+    .toggle .common{
+        position: absolute;
+        padding: 2%;
+        height: 4px;
+        width: 30px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 50px;
+        transition: 0.3s ease;
+    }
+
+    .toggle .top_line{
+        top: 30%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    .toggle .middle_line{
+        top: 50%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    .toggle .bottom_line{
+        top: 70%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    input:checked ~ .toggle .top_line{
+        left: 2px;
+        top: 14px;
+        width: 25px;
+        transform: rotate(45deg);
+    }
+
+    input:checked ~ .toggle .bottom_line{
+        left: 2px;
+        top: 14px;
+        width: 25px;
+        transform: rotate(-45deg);
+    }
+
+    input:checked ~ .toggle .middle_line{
+        opacity: 0;
+        transform: translateX(20px)
+    }
+
+    input:checked ~ .slide{
+        transform: translateX(0px);
+        box-shadow: 0 0 15px #061D20;
+    }
+}
+</style>

@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/NavResearch.astro';
+import Titulos from '../components/Titulos.astro';
+import ContenedorPadres from "../layouts/ContenedorPadres.astro";
+import Informacion from "../components/Informacion.astro";
+import ContenedorCartas from "../layouts/ContenedorCartas.astro";
+import CartasInformativa2 from "../components/CartaInformativa2.astro";
+import Botones from '../components/Botones.astro';
+import proyecto from "../data/Proyectos.js"
+
+---
+
+<Layout title='Proyectos ( Investigador )'>
+    <Nav enlace="/researchProjects" text='Proyectos' icon='fa-solid fa-helmet-safety'
+        enlace2="/researchEnvironments" text2='Ambiente' icon2='fa-solid fa-seedling'
+        enlace3='/researchForum' text3='Foros' icon3='fa-solid fa-users'
+        enlace4='/researchForumAdmin' text4='Foros Administrativos' icon4='fa-solid fa-people-group'
+        enlace5='/researchProfile' text5='Perfil' icon5='fa-solid fa-user'>
+    </Nav>
+
+    <!-- ContenedorPadre -->
+    <ContenedorPadres >
+        <Titulos title='Futuros proyectos'></Titulos>
+        <Informacion img='' subtitle='' contexto='Las Instituciones Universitarias, Instituto Unicersitario Politecnico "Santiago Marino" y El Tecnologico "Antonio Jose De Sucre" EXTENSION PORLAMAR, Se toman de la mano para dirigirse al municipio tubores, Punta de Piedras para estar presente a las comunidades y sectores'>
+            <div class="LogosUniversidad">
+                <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Instituciones/Antonio_jose_de_sucre.png?raw=true" alt="">
+                <img src="https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Instituciones/Santiago_Marinio.png?raw=true" alt="">
+            </div>
+        </Informacion>
+        <div class="icon">
+            <a href="/modifyInformation"><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a>
+            <i class="fa-solid fa-trash" style="color: #000000;"></i>
+        </div>
+    </ContenedorPadres>
+
+    <!-- ContenedorPadre 2 -->
+    <ContenedorPadres>
+        <ContenedorCartas>
+                {proyecto.map(p => (<CartasInformativa2 titulo={p.titulo} contexto={p.contexto} imagen={p.imagen} pdf={p.pdf} icon='fa-solid fa-pen-to-square' icon2='fa-solid fa-trash' enlace={p.ulr} enlace2=''/>))}
+            <Botones enlace='/registerInformationResearch' accion='Registrar'></Botones>
+        </ContenedorCartas>
+    </ContenedorPadres>
+</Layout>
+
+<style>
+	.LogosUniversidad{
+		display: flex;
+		justify-content: center;
+	}
+
+	img{
+		width: 20%; 
+		filter: drop-shadow(
+			0 0 5px rgb(255, 255, 255)
+		);
+	}
+
+    .icon{
+        margin: -2% 0 10% 0;
+		display: flex;
+        justify-content: space-evenly;
+		font-size: 150%;
+		width: 100%;
+	}
+</style>

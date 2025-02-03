@@ -1,0 +1,122 @@
+---
+interface Props{
+    question: string;
+    question2: string;
+    question3: string;
+    
+    answer: string;
+    answer2: string;
+    answer3: string;
+}
+
+const {question, question2, question3, 
+        answer, answer2, answer3} = Astro.props
+---
+
+<div class="formulario">
+    <form action="">
+        <div class="contenedor">
+            <div class="datos">
+                <label for="">{question}</label>
+                <input type="text" placeholder={answer} required>
+
+                <label for="">{question2}</label>
+                <textarea name="comentarios" required></textarea>
+
+                <label for="">{question3}</label>
+                <input type="file" placeholder={answer3} required>
+            </div>
+
+        </div>
+
+        <div class="botones">
+            <button>Guardar Cambios</button>
+        </div>
+    </form>
+</div>
+
+<style>
+    .formulario{
+        margin: 0;
+    }
+
+    .formulario form{
+        transition: all 900ms;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        margin: 2% 0 0 0;
+        padding: 2% 0;
+    }
+
+    .formulario form:hover{
+		border-radius: 25px;
+        color: rgb(255, 255, 255);
+		background-color: rgba(0, 0, 0, 0.8);
+		box-shadow: 0px 10px 60px 0px rgb(0, 0, 0);
+		transition: all 900ms;
+	}
+
+    .formulario form .contenedor{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .formulario form .contenedor .datos{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario form .contenedor .datos input{
+        margin: 2% 0 5% 0;
+        padding: 2%;
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+        border-bottom: 2px solid rgb(0, 0, 0);
+    }
+    .botones{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    button{
+        padding: 1% 4%;
+        border-radius: 10px;
+        border: solid 2px rgb(0, 0, 0);
+    }
+
+    textarea{
+        border-radius: 10px;
+        padding: 2% 2% 10% 2%;
+        width: 100%;
+        margin: 0 0 5% 0;
+        height: auto;
+        resize: none;
+    }
+
+    @media(max-width: 900px){
+        .formulario{
+            padding: 5% 0 0 0;
+        }
+
+        .formulario form .contenedor{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .formulario form .contenedor .datos{
+            width: 90%;
+        }
+
+        .formulario form .contenedor .datos input{
+            padding: 3% 0 3% 1%;
+        }
+
+        button{
+            padding: 4% 4%;
+        }
+    }
+</style>

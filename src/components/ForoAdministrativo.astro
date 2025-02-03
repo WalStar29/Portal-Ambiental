@@ -1,0 +1,102 @@
+---
+    interface Props {
+
+}
+const {} = Astro.props;
+---
+
+<div class="titulo"><h1>Foro Administrativo</h1></div>
+<div id="contenedor" class="scroll-container">
+    <div class="contenido">
+        <div class="text">
+            <input type="text" class="mensaje-input" placeholder="Escribe un mensaje">
+        <button class="enviar-mensaje">Enviar Mensaje</button>
+        </div>
+        <div class="mensajes"></div>
+    </div>
+</div>
+
+<script src="/src/js/ForumPriv.js"></script>
+
+
+<style>
+.titulo{
+    padding: 10% 0 0 0;
+    width: 100%;
+    text-align: center;
+    margin: 0% 0 2% 0;
+}
+
+.scroll-container {
+    height: 500px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255, 0.8);
+    transition: all 900ms;
+    border-radius: 10px;
+}.scroll-container:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.contenido {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.text{
+    padding: 0 0 2% 0;
+    border-bottom: #ffffff 2px solid;
+}
+
+input{
+    border: none;
+    padding: 1% 2%;
+    border-radius: 5px;
+    width: 50%;
+}
+
+button{
+    padding: 1% 2%;
+    border-radius: 10px;
+    border: none;
+}
+
+.mensajes {
+    height: 400px; /* Altura máxima del contenedor de mensajes */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    padding: 2%;
+}
+
+.mensaje {
+    margin: 10px 0; /* Márgenes arriba y abajo */
+    background-color: #ffffff; /* Fondo del mensaje */
+    padding: 10px;
+    border: 1px solid #000; /* Borde del mensaje */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+
+@media(max-width: 900px){
+    .titulo{
+        padding: 10% 0 0 0;
+    }
+
+    button{
+        margin: 2% 0 0 0;
+        padding: 2%;
+        border-radius: 10px;
+        border: none;
+    }
+
+    input{
+    border: none;
+    padding: 2%;
+    border-radius: 5px;
+    width: 70%;
+}
+}
+
+</style>

@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/NavAdmin.astro';
+import Titulos from '../components/Titulos.astro';
+import ContenedorPadres from "../layouts/ContenedorPadres.astro";
+import Informacion from "../components/Informacion.astro";
+import Slider from "../components/Slider.astro";
+
+import caracteristicas from "../data/CaracteristicasLaguna.js"
+import uso from "../data/UsoLaguna.js"
+import importancia from '../data/ImportanciaLaguna.js';
+---
+
+<Layout title='Laguna de Punta de Piedras (Administrador)'>
+    <Nav enlace="/adminHome" text='Home' icon='fa-solid fa-house'
+        enlace2="/adminGallery" text2='Galeria' icon2='fa-solid fa-image'
+        enlace3="/adminProjects" text3='Proyectos' icon3='fa-solid fa-helmet-safety'
+        enlace4='/adminEnvironments' text4='Ambiente' icon4='fa-solid fa-seedling'
+        enlace5='/adminTourism' text5='Turismo' icon5='fa-solid fa-umbrella-beach'
+        enlace6='/adminCounsellor' text6='Consejales' icon6='fa-solid fa-people-arrows'
+        enlace7='/adminResearch' text7='Investigadores' icon7='fa-solid fa-magnifying-glass'
+        enlace8='/adminForum' text8='Foro' icon8='fa-solid fa-users'
+        enlace9='/adminForumAdmin' text9='Foros Administrativos' icon9='fa-solid fa-people-group'
+        enlace10='/adminProfile' text10='Perfil' icon10='fa-solid fa-user'>
+    </Nav>
+
+    <!-- ContenedorPadre -->
+    <ContenedorPadres>
+        <Titulos title='Laguna de punta de piedras'></Titulos>
+        <Informacion subtitle='' img='' contexto='La Laguna de Punta de Piedras es un importante cuerpo de agua ubicado en la ciudad de Punta de Piedras, en el estado Nueva Esparta, Venezuela. Esta laguna es un ambiente costero cercano a un desarrollo urbano significativo en la Isla de Margarita, lo que influye en las características fisicoquímicas de sus aguas.'>
+            <img src="https://github.com/WalStar29/Portal-Digital/blob/main/public/Punta_de_Piedras_aerea.jpg?raw=true" alt="">
+        </Informacion>
+        <div class="icon">
+            <a href="/modifyInformationAdmin"><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a>
+            <i class="fa-solid fa-trash" style="color: #000000;"></i>
+        </div>
+    </ContenedorPadres>
+
+    <!-- ContenedorPadre 2 -->
+    <ContenedorPadres>
+        <Titulos title='Características de la Laguna'></Titulos>
+        {caracteristicas.map(c => (<div> <Informacion subtitle={c.subtitle} contexto={c.contexto} img="" /> 
+            <div class="icon"> 
+                <a href={c.ulr2}><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a> 
+                <i class="fa-solid fa-trash" style="color: #000000;"></i> 
+            </div> 
+        </div> ))}
+    </ContenedorPadres>
+
+    <!-- ContenedoPadre 3 -->
+    <ContenedorPadres>
+        <Titulos title='Usos'></Titulos>
+        {uso.map(u => (<div> <Informacion subtitle={u.subtitle} contexto={u.contexto} img="" /> 
+            <div class="icon"> 
+                <a href={u.ulr2}><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a> 
+                <i class="fa-solid fa-trash" style="color: #000000;"></i> 
+            </div> 
+        </div> ))}
+    </ContenedorPadres>
+
+    <!-- ContenedoPadre 4 -->
+    <ContenedorPadres>
+        <Titulos title='Importancia'></Titulos>
+        {importancia.map(i => (<div><Informacion subtitle={i.subtitle} contexto={i.contexto} img=""/>
+        <div class="icon">
+            <a href={i.ulr2}><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a> 
+            <i class="fa-solid fa-trash" style="color: #000000;"></i> 
+        </div></div>))}
+    </ContenedorPadres>
+
+    <!-- ContenedorPadre 5 -->
+    <ContenedorPadres>
+        <Titulos title='La laguna en la actualidad'></Titulos>
+        <Informacion img='' subtitle='' contexto='Actualmente se a observado que la comunidad enfrenta multiples desafios relacionados con la contaminacion, la comunidad carece de infraestructuras y servicios basicos, como instalaciones academicas y centro de salud, lo que limita el acceso a recursos esenciales y afecta la calidad de vida de los habitantes. Se reportan problemas de senamiento, comom aguas negras estancadas en las calles, que representa un riesgo para la salud publica y constribuyen a la contaminacion de la laguna. Existe una necesidad urgente de aumentar la conciencia y educacion sobre la importancia de la conservacion del medio ambiente.'>
+            <Slider 
+            imagen='https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Slider/Contraminacion%20Sector.jpg?raw=true' 
+            imagen2='https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Slider/Contraminacion2%20Sector.jpg?raw=true' 
+            imagen3='https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Slider/Contraminacion3%20Sector.jpg?raw=true' 
+            imagen4='https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Slider/Contraminacion4%20Sector.jpg?raw=true' 
+            imagen5='https://github.com/WalStar29/Portal-Educativo-Ambiental/blob/main/public/Slider/Contraminacion5%20Sector.jpg?raw=true'>
+            </Slider>
+        </Informacion>
+    </ContenedorPadres>
+</Layout>
+
+
+<style>
+    img{
+        width: 50%;
+        border-radius: 5px;
+    }
+
+    
+    .icon{
+        margin: -2% 0 10% 0;
+		display: flex;
+		justify-content: space-around;
+		font-size: 150%;
+		width: 100%;
+	}
+</style>

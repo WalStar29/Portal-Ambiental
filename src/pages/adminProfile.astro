@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/NavAdmin.astro';
+import Titulos from '../components/Titulos.astro';
+---
+
+<Layout title='Punta de piedras'>
+    <Nav enlace="/adminHome" text='Home' icon='fa-solid fa-house'
+        enlace2="/adminGallery" text2='Galeria' icon2='fa-solid fa-image'
+        enlace3="/adminProjects" text3='Proyectos' icon3='fa-solid fa-helmet-safety'
+        enlace4='/adminEnvironments' text4='Ambiente' icon4='fa-solid fa-seedling'
+        enlace5='/adminTourism' text5='Turismo' icon5='fa-solid fa-umbrella-beach'
+        enlace6='/adminCounsellor' text6='Consejales' icon6='fa-solid fa-people-arrows'
+        enlace7='/adminResearch' text7='Investigadores' icon7='fa-solid fa-magnifying-glass'
+        enlace8='/adminForum' text8='Foro' icon8='fa-solid fa-users'
+        enlace9='/adminForumAdmin' text9='Foros Administrativos' icon9='fa-solid fa-people-group'
+        enlace10='/adminProfile' text10='Perfil' icon10='fa-solid fa-user'>
+    </Nav>
+
+    <Titulos title='Walter Castro'></Titulos>
+    <div class="contenedor">
+        <div class="left">
+            <label for=""><b>Cedula: </b> 29.582.989</label>
+            <label for=""><b>Nombre: </b> Walter Catro</label>
+            <label for=""><b>correo electronico: </b> waltercastro172913@gmail.com</label>
+            <label for=""><b>Telefono: </b> 0414-7996937</label>
+            <br><br>
+            <label for=""><b>Usuario: </b> Usuario4</label>
+            <label for=""><b>Contrasenia: </b> Contrasenia4</label>
+
+            <button><a href="/">Cerrar Sesion</a></button>
+        </div>
+
+        <div class="right">
+            <i class="fa-solid fa-user" style="color: #005eff;"></i>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .contenedor {
+        width: 100%;
+        padding: 0 10%;
+        display: flex;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    button{
+        width: 30%;
+        border: none;
+        padding: 2% 0;
+        margin: 5% 0 0 0;
+        border-radius: 5px;
+    }
+
+    button a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+
+    .right{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .right i{
+        font-size: 600%;
+    }
+
+    @media(max-width: 700px){
+        .contenedor{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .right{
+            width: 100%;
+            margin: 0 0 10% 0;
+        }
+
+        button{
+            width: 80%;
+            padding: 5% 0;
+        }
+    }
+</style>
