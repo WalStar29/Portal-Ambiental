@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Nav from '../components/NavAdmin.astro';
+import Formulario from "../components/RegisterImage.astro";
+---
+
+<Layout title='Registro de imagen'>
+    <Nav enlace="https://walstar29.github.io/Portal-Ambiental/adminHome/" text='Home' icon='fa-solid fa-house'
+        enlace2="https://walstar29.github.io/Portal-Ambiental/adminGallery/" text2='Galeria' icon2='fa-solid fa-image'
+        enlace3="https://walstar29.github.io/Portal-Ambiental/adminProjects/" text3='Proyectos' icon3='fa-solid fa-helmet-safety'
+        enlace4='https://walstar29.github.io/Portal-Ambiental/adminEnvironments/' text4='Ambiente' icon4='fa-solid fa-seedling'
+        enlace5='https://walstar29.github.io/Portal-Ambiental/adminTourism/' text5='Turismo' icon5='fa-solid fa-umbrella-beach'
+        enlace6='https://walstar29.github.io/Portal-Ambiental/adminCounsellor/' text6='Consejales' icon6='fa-solid fa-people-arrows'
+        enlace7='https://walstar29.github.io/Portal-Ambiental/adminResearch/' text7='Investigadores' icon7='fa-solid fa-magnifying-glass'
+        enlace8='https://walstar29.github.io/Portal-Ambiental/adminForum/' text8='Foro' icon8='fa-solid fa-users'
+        enlace9='https://walstar29.github.io/Portal-Ambiental/adminForumAdmin/' text9='Foros Administrativos' icon9='fa-solid fa-people-group'
+        enlace10='https://walstar29.github.io/Portal-Ambiental/adminProfile/' text10='Perfil' icon10='fa-solid fa-user'>
+    </Nav>
+
+    <div class="div">
+        <h2>Registro de imagenn</h2>
+    </div>
+    
+    <Formulario question="Nueva imagen"
+                answer="Ingrese la imagen"
+    ></Formulario>
+</Layout>
+
+<style>
+    .div{
+        padding: 10% 0 0 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* ---------------------------RESPONSIVE MOBILE -------------------------*/
+@media(max-width: 900px){
+	.div{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+}
+</style>
