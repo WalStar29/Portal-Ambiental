@@ -2,22 +2,22 @@ const predefinedUsers = [
     {
         username: "usuario1",
         password: "contrasenia1",
-        redirectUrl: "/main"
+        redirectUrl: "https://walstar29.github.io/Portal-Ambiental/main/"
     },
     {
         username: "usuario2",
         password: "contrasenia2",
-        redirectUrl: "/researchProjects"
+        redirectUrl: "https://walstar29.github.io/Portal-Ambiental/researchProjects/"
     },
     {
         username: "usuario3",
         password: "contrasenia3",
-        redirectUrl: "/counsellorForum"
+        redirectUrl: "https://walstar29.github.io/Portal-Ambiental/counsellorForum/"
     },
     {
         username: "usuario4",
         password: "contrasenia4",
-        redirectUrl: "/adminHome"
+        redirectUrl: "https://walstar29.github.io/Portal-Ambiental/adminHome/"
     }
 ];
 

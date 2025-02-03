@@ -15,16 +15,16 @@ import flora from '../data/Flora.js'
 ---
 
 <Layout title='Administrador'>
-    <Nav enlace="/adminHome" text='Home' icon='fa-solid fa-house'
-        enlace2="/adminGallery" text2='Galeria' icon2='fa-solid fa-image'
-        enlace3="/adminProjects" text3='Proyectos' icon3='fa-solid fa-helmet-safety'
-        enlace4='/adminEnvironments' text4='Ambiente' icon4='fa-solid fa-seedling'
-        enlace5='/adminTourism' text5='Turismo' icon5='fa-solid fa-umbrella-beach'
-        enlace6='/adminCounsellor' text6='Consejales' icon6='fa-solid fa-people-arrows'
-        enlace7='/adminResearch' text7='Investigadores' icon7='fa-solid fa-magnifying-glass'
-        enlace8='/adminForum' text8='Foro' icon8='fa-solid fa-users'
-        enlace9='/adminForumAdmin' text9='Foros Administrativos' icon9='fa-solid fa-people-group'
-        enlace10='/adminProfile' text10='Perfil' icon10='fa-solid fa-user'>
+    <Nav enlace="https://walstar29.github.io/Portal-Ambiental/adminHome/" text='Home' icon='fa-solid fa-house'
+        enlace2="https://walstar29.github.io/Portal-Ambiental/adminGallery/" text2='Galeria' icon2='fa-solid fa-image'
+        enlace3="https://walstar29.github.io/Portal-Ambiental/adminProjects/" text3='Proyectos' icon3='fa-solid fa-helmet-safety'
+        enlace4='https://walstar29.github.io/Portal-Ambiental/adminEnvironments/' text4='Ambiente' icon4='fa-solid fa-seedling'
+        enlace5='https://walstar29.github.io/Portal-Ambiental/adminTourism/' text5='Turismo' icon5='fa-solid fa-umbrella-beach'
+        enlace6='https://walstar29.github.io/Portal-Ambiental/adminCounsellor/' text6='Consejales' icon6='fa-solid fa-people-arrows'
+        enlace7='https://walstar29.github.io/Portal-Ambiental/adminResearch/' text7='Investigadores' icon7='fa-solid fa-magnifying-glass'
+        enlace8='https://walstar29.github.io/Portal-Ambiental/adminForum/' text8='Foro' icon8='fa-solid fa-users'
+        enlace9='https://walstar29.github.io/Portal-Ambiental/adminForumAdmin/' text9='Foros Administrativos' icon9='fa-solid fa-people-group'
+        enlace10='https://walstar29.github.io/Portal-Ambiental/adminProfile/' text10='Perfil' icon10='fa-solid fa-user'>
     </Nav>
 
 
@@ -36,7 +36,7 @@ import flora from '../data/Flora.js'
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30117.910166229405!2d-64.11043915274557!3d10.904541562118578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c31f7cc9dcf8c31%3A0x40babd702bc746bf!2sPunta%20de%20Piedras%2C%20Nueva%20Esparta!5e1!3m2!1ses!2sve!4v1730230321815!5m2!1ses!2sve" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </Informacion>
             <div class="icon">
-                <a href="/modifyInformationAdmin"><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a>
+                <a href="https://walstar29.github.io/Portal-Ambiental/modifyInformationAdmin/"><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a>
                 <i class="fa-solid fa-trash" style="color: #000000;"></i> 
             </div>
         </ContenedorPadres>
@@ -52,7 +52,7 @@ import flora from '../data/Flora.js'
                     <i class="fa-solid fa-trash" style="color: #000000;"></i> 
                 </div> 
             </div> ))} 
-            <Botones enlace='/registerInformationAdmin' accion='Registrar'></Botones>
+            <Botones enlace='https://walstar29.github.io/Portal-Ambiental/registerInformationAdmin/' accion='Registrar'></Botones>
         </ContenedorPadres>
     
         <!-- ContenedoPadre 3 -->
@@ -66,7 +66,7 @@ import flora from '../data/Flora.js'
                     <i class="fa-solid fa-trash" style="color: #000000;"></i> 
                 </div> 
             </div> ))}
-            <Botones enlace='/registerInformationAdmin' accion='Registrar'></Botones>
+            <Botones enlace='https://walstar29.github.io/Portal-Ambiental/registerInformationAdmin/' accion='Registrar'></Botones>
         </ContenedorPadres>
     
         <!-- ContenedoPadre 4 -->
@@ -77,7 +77,7 @@ import flora from '../data/Flora.js'
             <ContenedorCartas>
                 {faunaPuntaPiedras.map(f => (<CartasInformativa titulo={f.titulo} contexto={f.contexto} imagen={f.imagen} icon='fa-solid fa-pen-to-square' icon2='fa-solid fa-trash' enlace={f.ulr2} enlace2=''/>))}
             </ContenedorCartas>
-            <Botones enlace='/registerInformationAdmin' accion='Registrar'></Botones>
+            <Botones enlace='https://walstar29.github.io/Portal-Ambiental/registerInformationAdmin/' accion='Registrar'></Botones>
         </ContenedorPadres>
 
         <!-- ContenedorPadre 5 -->
@@ -88,7 +88,7 @@ import flora from '../data/Flora.js'
             <ContenedorCartas>
                 {flora.map(f => (<CartasInformativa titulo={f.titulo} contexto={f.contexto} imagen={f.imagen} icon='fa-solid fa-pen-to-square' icon2='fa-solid fa-trash' enlace={f.ulr2} enlace2=''/>))}
             </ContenedorCartas>
-            <Botones enlace='/registerInformationAdmin' accion='Registrar'></Botones>
+            <Botones enlace='https://walstar29.github.io/Portal-Ambiental/registerInformationAdmin/' accion='Registrar'></Botones>
         </ContenedorPadres>
 </Layout>
 
