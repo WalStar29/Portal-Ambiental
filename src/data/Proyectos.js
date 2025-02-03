@@ -62,7 +62,7 @@ const proyectos = [
     {
         titulo: "Propuesta de Diseño Arquitectónico Ecoturistico del Antiguo Paseo Esther Gil de Punta de Piedras, Municipio Tubores, Estado Nueva Esparta, Venezuela",
         contexto: "El proyecto busca crear un espacio público que conecte a la comunidad con la naturaleza y fomente la actividad física. Este paseo contará con caminerías, áreas verdes, áreas de descanso con bancos, churuatas, muelles, una pista de atletismo para promover e inculcar el deporte en los jóvenes, así como un campo de softball. Más allá de ofrecer un lugar para relajarse y ejercitarse, este proyecto busca mejorar la calidad de vida de los habitantes de Punta de Piedras y contribuir al desarrollo económico local, todo mientras se protege el medio ambiente y se rinde homenaje a una figura importante de la comunidad como Esther Gil.",
-        imagen: "https://github.com/WalStar29/Portal-Ambiental/blob/main/public/Arquitecturas/Arquitecturas5.jpg?raw=true",
+        imagen: "https://github.com/WalStar29/Portal-Ambiental/blob/main/public/Arquitecturas/Arquitectura5.jpg?raw=true",
         id: "7",
         ulr: "https://walstar29.github.io/Portal-Ambiental/modifyInformation/",
         ulr2: "https://walstar29.github.io/Portal-Ambiental/modifyInformationAdmin/",
