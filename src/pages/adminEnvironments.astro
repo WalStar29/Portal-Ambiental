@@ -9,6 +9,7 @@ import Slider from "../components/Slider.astro";
 import caracteristicas from "../data/CaracteristicasLaguna.js"
 import uso from "../data/UsoLaguna.js"
 import importancia from '../data/ImportanciaLaguna.js';
+import accionEstrategica from '../data/AccionesEstrategiscas.js';
 ---
 
 <Layout title='Laguna de Punta de Piedras (Administrador)'>
@@ -80,6 +81,16 @@ import importancia from '../data/ImportanciaLaguna.js';
             imagen5='https://github.com/WalStar29/Portal-Ambiental/blob/main/public/Slider/Contraminacion5%20Sector.jpg?raw=true'>
             </Slider>
         </Informacion>
+    </ContenedorPadres>
+
+    <!-- ContenedorPadre 6 -->
+    <ContenedorPadres>
+        <Titulos title='Acciones y estrategias'></Titulos>
+        {accionEstrategica.map(a => (<div> <Informacion subtitle={a.subtitle} contexto={a.contexto} img={a.img}/> 
+        <div class="icon">
+            <a href={a.ulr2}><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a> 
+            <i class="fa-solid fa-trash" style="color: #000000;"></i> 
+        </div></div>))}
     </ContenedorPadres>
 </Layout>
 

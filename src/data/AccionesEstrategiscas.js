@@ -12,7 +12,7 @@ const accionEstrategica = [
         subtitle: "",
         contexto: "2) Promover la participación activa de la comunidad en actividades de conservación y limpieza de la Laguna de Punta de Piedras, estimulando el sentido de responsabilidad ambiental entre los habitantes",
         id: "2",
-        img: "https://github.com/WalStar29/Portal-Ambiental/blob/main/public/Imagenes/jovenesLimpiezas.jpg?raw=true",
+        img: "https://github.com/WalStar29/Portal-Ambiental/blob/main/public/Imagenes/jovenesLimpieza.jpg?raw=true",
         ulr: "https://walstar29.github.io/Portal-Ambiental/modifyInformation/",
         ulr2: "https://walstar29.github.io/Portal-Ambiental/modifyInformationAdmin/"
     },
