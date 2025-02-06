@@ -9,6 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.1.10"
+    "@astrojs/db": "^0.14.6",
+    "@prisma/client": "^6.3.1",
+    "astro": "^5.1.10",
+    "mysql": "^2.18.1",
+    "prisma": "^6.3.1"
   }
 }
