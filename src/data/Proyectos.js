@@ -6,7 +6,7 @@ const proyectos = [
         id: "1",
         ulr: "https://walstar29.github.io/Portal-Ambiental/modifyInformation/",
         ulr2: "https://walstar29.github.io/Portal-Ambiental/modifyInformationAdmin/",
-        pdf: "https://drive.google.com/file/d/156uMw8N_IaM3QhKWK7gA1HPPE4Pv5i_t/view?usp=drive_link"
+        pdf: "https://drive.google.com/file/d/17FB7RrRvL6OaBPBTahb-vCHf82QBwEjq/view?usp=drive_link"
     },
 
     {
