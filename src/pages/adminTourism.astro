@@ -1,6 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/NavAdmin.astro';
+import ContenedorPadres from "../layouts/ContenedorPadres.astro";
+import Titulos from "../components/Titulos.astro";
+import Informacion from "../components/Informacion.astro";
+import Slider from "../components/Slider.astro";
+import H1 from "../components/Titulos.astro";
+
+import atractivosTuristicos from "../data/AtractivosTuristicos.js"
+import actividadesTuristicas from "../data/ActividadesTuristicas.js"
 ---
 
 <Layout title='Punta de piedras (Adminisrador)'>
@@ -15,4 +23,53 @@ import Nav from '../components/NavAdmin.astro';
         enlace9='https://walstar29.github.io/Portal-Ambiental/adminForumAdmin/' text9='Foros Administrativos' icon9='fa-solid fa-people-group'
         enlace10='https://walstar29.github.io/Portal-Ambiental/adminProfile/' text10='Perfil' icon10='fa-solid fa-user'>
     </Nav>
+
+            <!-- ContenedorPadre -->
+        <ContenedorPadres>
+            <div>
+                <Titulos title='EL turismo de Punta de Piedras'></Titulos>
+            </div>
+            <Informacion subtitle='' img='' contexto='Punta de Piedras, ubicada en la costa meridional de la Isla de Margarita, Venezuela, es un destino turístico destacado por su belleza natural, su rica historia y su vibrante cultura. Este pueblo, que es la capital del Municipio Tubores, ofrece a los visitantes una variedad de atracciones y actividades que hacen de su visita una experiencia memorable.'>
+                <Slider 
+                    imagen='https://github.com/WalStar29/Portal-Ambiental/blob/main/public/FestividadesyTradiciones/Turismo.jpg?raw=true' 
+                    imagen2='https://github.com/WalStar29/Portal-Ambiental/blob/main/public/Turismo/conferry1.jpg?raw=true' 
+                    imagen3='https://github.com/WalStar29/Portal-Ambiental/blob/main/public/Turismo/PuntadePiedras.jpg?raw=true' 
+                    imagen4='https://github.com/WalStar29/Portal-Ambiental/blob/main/public/Galeria/imagen_9.jpg?raw=true' 
+                    imagen5=''>
+                </Slider>
+            </Informacion>
+            <div class="icon">
+                <a href="https://walstar29.github.io/Portal-Ambiental/modifyInformationAdmin/"><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a>
+                <i class="fa-solid fa-trash" style="color: #000000;"></i>
+            </div>
+        </ContenedorPadres>
+    
+        <!-- ContenedorPadre 2 -->
+        <ContenedorPadres>
+            <H1 title='Atractivos Turísticos de Punta de Piedras'></H1>
+            {atractivosTuristicos.map(a => (<div><Informacion subtitle={a.subtitle} contexto={a.contexto} img={a.img}/> 
+            <div class="icon"> 
+                <a href={a.ulr2}><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a> 
+                <i class="fa-solid fa-trash" style="color: #000000;"></i> 
+            </div></div>))}
+        </ContenedorPadres>
+    
+        <ContenedorPadres>
+            <H1 title='Actividades Turísticas'></H1>
+            {actividadesTuristicas.map(a => (<div><Informacion subtitle={a.subtitle} contexto={a.contexto} img={a.img}/>
+            <div class="icon"> 
+                <a href={a.ulr2}><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a> 
+                <i class="fa-solid fa-trash" style="color: #000000;"></i> 
+            </div></div>))}
+        </ContenedorPadres>
 </Layout>
+
+<style>
+.icon{
+    margin: -2% 0 10% 0;
+	display: flex;
+	justify-content: space-around;
+	font-size: 150%;
+	width: 100%;
+}
+</style>

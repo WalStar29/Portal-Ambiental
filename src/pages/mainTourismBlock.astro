@@ -1,6 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
+import ContenedorPadres from "../layouts/ContenedorPadres.astro";
+import Titulos from "../components/Titulos.astro";
+import Informacion from "../components/Informacion.astro";
+import Slider from "../components/Slider.astro";
+import H1 from "../components/Titulos.astro";
+
+import atractivosTuristicos from "../data/AtractivosTuristicos.js"
+import actividadesTuristicas from "../data/ActividadesTuristicas.js"
 ---
 
 <Layout title='Punta de piedras'>
@@ -13,4 +21,33 @@ import Nav from '../components/Nav.astro';
         enlace7='https://walstar29.github.io/Portal-Ambiental/mainForumBlock/' text7='Foro' icon7='fa-solid fa-users'
         enlace8='https://walstar29.github.io/Portal-Ambiental/signIn/' text8='Iniciar sesion' icon8=''>
     </Nav>
+
+    <!-- ContenedorPadre -->
+    <ContenedorPadres>
+        <div>
+            <Titulos title='EL turismo de Punta de Piedras'></Titulos>
+        </div>
+        <Informacion subtitle='' img='' contexto='Punta de Piedras, ubicada en la costa meridional de la Isla de Margarita, Venezuela, es un destino turístico destacado por su belleza natural, su rica historia y su vibrante cultura. Este pueblo, que es la capital del Municipio Tubores, ofrece a los visitantes una variedad de atracciones y actividades que hacen de su visita una experiencia memorable.'>
+            <Slider 
+                imagen='https://github.com/WalStar29/Portal-Ambiental/blob/main/public/FestividadesyTradiciones/Turismo.jpg?raw=true' 
+                imagen2='https://github.com/WalStar29/Portal-Ambiental/blob/main/public/Turismo/conferry1.jpg?raw=true' 
+                imagen3='https://github.com/WalStar29/Portal-Ambiental/blob/main/public/Turismo/PuntadePiedras.jpg?raw=true' 
+                imagen4='https://github.com/WalStar29/Portal-Ambiental/blob/main/public/Galeria/imagen_9.jpg?raw=true' 
+                imagen5=''>
+            </Slider>
+        </Informacion>
+    </ContenedorPadres>
+
+    <!-- ContenedorPadre 2 -->
+    <ContenedorPadres>
+        <H1 title='Atractivos Turísticos de Punta de Piedras'></H1>
+        {atractivosTuristicos.map(a => (<Informacion subtitle={a.subtitle} contexto={a.contexto} img={a.img}/> ))}
+    </ContenedorPadres>
+
+    <ContenedorPadres>
+        <H1 title='Actividades Turísticas'></H1>
+        {actividadesTuristicas.map(a => (<Informacion subtitle={a.subtitle} contexto={a.contexto} img={a.img}/> ))}
+    </ContenedorPadres>
 </Layout>
+
+    
