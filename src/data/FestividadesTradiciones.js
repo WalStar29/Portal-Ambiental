@@ -2,7 +2,7 @@ const festividadesTradiciones = [
     {
         subtitle: "1) San Simón Apóstol:",
         contexto: "Celebrado el 28 de octubre, es una de las festividades más importantes de la ciudad. Incluye misas, procesiones y actividades culturales.",
-        img: "https://github.com/WalStar29/Portal-Ambiental/blob/main/public/FestividadesyTradiciones/SanSimonApostol.jpg?raw=true",
+        img: "https://github.com/WalStar29/Portal-Ambiental/blob/main/public/FestividadesyTradiciones/apostol.jpeg?raw=true",
         id: "1",
         ulr: "https://walstar29.github.io/Portal-Ambiental/modifyInformation/",
         ulr2: "https://walstar29.github.io/Portal-Ambiental/modifyInformationAdmin/"
@@ -11,7 +11,7 @@ const festividadesTradiciones = [
     {
         subtitle: "2) Nuestra Señora de Las Mercedes:",
         contexto: "Celebrada el 25 de noviembre, es una de las festividades más importantes del municipio. Incluye misas, procesiones y actividades culturales. La devoción a esta virgen fue introducida en la comunidad a principios del siglo XX.",
-        img: "https://github.com/WalStar29/Portal-Ambiental/blob/main/public/FestividadesyTradiciones/NuestraSe%C3%B1oradeLasMercedes.jpg?raw=true",
+        img: "https://github.com/WalStar29/Portal-Ambiental/blob/main/public/FestividadesyTradiciones/mercede.jpeg?raw=true",
         id: "1",
         ulr: "https://walstar29.github.io/Portal-Ambiental/modifyInformation/",
         ulr2: "https://walstar29.github.io/Portal-Ambiental/modifyInformationAdmin/"
@@ -20,7 +20,7 @@ const festividadesTradiciones = [
     {
         subtitle: "3) Virgen del Carmen y Virgen del Valle:",
         contexto: "Se realizan tradicionales paseos por el mar en honor a estas vírgenes, que son muy veneradas en la región.",
-        img: "https://github.com/WalStar29/Portal-Ambiental/blob/main/public/FestividadesyTradiciones/VirgendelCarmenyVirgendelValle.jpg?raw=true",
+        img: "https://github.com/WalStar29/Portal-Ambiental/blob/main/public/FestividadesyTradiciones/virgen.webp?raw=true",
         id: "3",
         ulr: "https://walstar29.github.io/Portal-Ambiental/modifyInformation/",
         ulr2: "https://walstar29.github.io/Portal-Ambiental/modifyInformationAdmin/"

@@ -2,7 +2,7 @@ const proyectos = [
     {
         titulo: "Portal Digital para la concientizacion del ambiente",
         contexto: "Se propone el desarrollo de un Portal Digital para la conientizacion del ambiente educativo, que busque informacion y sensibilizar a la comunidad sobre el cuidado ambiental",
-        imagen: "https://github.com/WalStar29/Portal-Ambiental/blob/main/public/IngenieriaSistemas/GrupoSISTEMAS.jpg?raw=true",
+        imagen: "https://github.com/WalStar29/Portal-Ambiental/blob/main/public/IngenieriaSistemas/sistemas.jpg?raw=true",
         id: "1",
         ulr: "https://walstar29.github.io/Portal-Ambiental/modifyInformation/",
         ulr2: "https://walstar29.github.io/Portal-Ambiental/modifyInformationAdmin/",

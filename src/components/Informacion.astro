@@ -23,9 +23,7 @@ const {contexto, subtitle, img} = Astro.props;
 <style>
 	.Contenedor .Container{
 		font-size: 100%;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		padding: 0 0 2% 0;
+		
 	}
 
 	.multimedia{
@@ -37,9 +35,15 @@ const {contexto, subtitle, img} = Astro.props;
 	}
 
 	img{
-		margin: 2% 0 5% 0;
+		margin: 5% 0;
 		width: 30%;
 		border-radius: 5px;
+	}
+
+	@media(max-width: 900px){
+		img{
+			width: 50%;
+		}
 	}
 
 </style>
